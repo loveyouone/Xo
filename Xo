@@ -10,7 +10,7 @@ local a=tostring(game.Players.LocalPlayer.Character);
 
 if a=="rtorply"then
 _G.she=true
-elseif a=="popxm3"then
+if a=="popxm3"then
 _G.she=true
 elseif a=="qunmde13"then
 _G.she=true
@@ -76,6 +76,16 @@ local about = Window:MakeTab({
     PremiumOnly = false
 })
 
+about:AddParagraph("云端更新")
+about:AddParagraph("只选优质脚本缝合")
+about:AddParagraph("永久免费")
+about:AddParagraph("作者：A 1462317224")
+about:AddParagraph("此脚本为缝合脚本")
+about:AddParagraph("😎😎😎")
+about:AddParagraph("🤓🤓🤓")
+about:AddParagraph("😋😋😋")
+about:AddParagraph("不断优化中")
+
 local Tab = Window:MakeTab({
 
     Name = "基本功能",
@@ -89,6 +99,255 @@ local Tab = Window:MakeTab({
 local Section = Tab:AddSection({
 
 	Name = "欢迎"
+
+})
+
+Tab:AddSlider({
+
+	Name = "速度",
+
+	Min = 16,
+
+	Max = 200,
+
+	Default = 16,
+
+	Color = Color3.fromRGB(255,255,255),
+
+	Increment = 1,
+
+	ValueName = "数值",
+
+	Callback = function(Value)
+
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+
+	end    
+
+})
+
+Tab:AddSlider({
+
+	Name = "跳跃高度",
+
+	Min = 50,
+
+	Max = 200,
+
+	Default = 50,
+
+	Color = Color3.fromRGB(255,255,255),
+
+	Increment = 1,
+
+	ValueName = "数值",
+
+	Callback = function(Value)
+
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+
+	end    
+
+})
+
+Tab:AddTextbox({
+
+	Name = "跳跃高度设置",
+
+	Default = "",
+
+	TextDisappear = true,
+
+	Callback = function(Value)
+
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+
+	end
+
+})
+
+Tab:AddTextbox({
+
+	Name = "移动速度设置",
+
+	Default = "",
+
+	TextDisappear = true,
+
+	Callback = function(Value)
+
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+
+	end
+
+})
+
+Tab:AddTextbox({
+
+	Name = "重力设置",
+
+	Default = "",
+
+	TextDisappear = true,
+
+	Callback = function(Value)
+
+		game.Workspace.Gravity = Value
+
+	end
+
+})
+
+Tab:AddToggle({
+
+	Name = "夜视",
+
+	Default = false,
+
+	Callback = function(Value)
+
+		if Value then
+
+		    game.Lighting.Ambient = Color3.new(1, 1, 1)
+
+		else
+
+		    game.Lighting.Ambient = Color3.new(0, 0, 0)
+
+		end
+
+	end
+
+})
+
+Tab:AddButton({
+
+	Name = "最好看光影",
+
+	Callback = function()
+
+loadstring(game:HttpGet("https://pastebin.com/raw/Bkf0BJb3"))()
+
+end
+
+})
+
+Tab:AddButton({
+	Name = "超高画质",
+	Callback = function()
+loadstring(game:HttpGet("https://pastebin.com/raw/jHBfJYmS"))()
+end
+})    
+
+Tab:AddButton({
+
+  Name = "闹大肘🐔",
+
+  Callback = function ()
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/0Ben1/fe/main/obf_5wpM7bBcOPspmX7lQ3m75SrYNWqxZ858ai3tJdEAId6jSI05IOUB224FQ0VSAswH.lua.txt'),true))()
+
+  end
+
+})
+
+Tab:AddButton({
+
+	Name = "甩飞别人",
+
+	Callback = function()
+
+     loadstring(game:HttpGet("https://pastebin.com/raw/GnvPVBEi"))()
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "飞车",
+
+	Callback = function()
+
+     loadstring(game:HttpGet("https://pastebin.com/raw/GGDcLKsg"))()
+
+  	end    
+
+})
+
+Tab:AddToggle({
+
+	Name = "穿墙",
+
+	Default = false,
+
+	Callback = function(Value)
+
+		if Value then
+
+		    Noclip = true
+
+		    Stepped = game.RunService.Stepped:Connect(function()
+
+			    if Noclip == true then
+
+				    for a, b in pairs(game.Workspace:GetChildren()) do
+
+                        if b.Name == game.Players.LocalPlayer.Name then
+
+                            for i, v in pairs(game.Workspace[game.Players.LocalPlayer.Name]:GetChildren()) do
+
+                                if v:IsA("BasePart") then
+
+                                    v.CanCollide = false
+
+                                end
+
+                            end
+
+                        end
+
+                    end
+
+			    else
+
+				    Stepped:Disconnect()
+
+			    end
+
+		    end)
+
+	    else
+
+		    Noclip = false
+
+	    end
+
+	end
+
+})
+
+Tab:AddButton({
+
+	Name = "踏空行走",
+
+	Callback = function()
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Float'))()
+
+	end
+
+})
+
+Tab:AddButton({
+
+    Name="立即死亡",
+
+    Callback=function()
+
+        game.Players.LocalPlayer.Character.Humanoid.Health=0
+
+    end
 
 })
 
@@ -556,7 +815,19 @@ local Tab = Window:MakeTab({
 
 Tab:AddButton({
 
-	Name = "HoHo blox fruit",
+  Name = "bf1",
+
+  Callback = function ()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Minhtriettt/Free-Script/main/MTriet-Hub.lua"))()
+
+  end
+
+})
+
+Tab:AddButton({
+
+	Name = "HoHo bf要卡密",
 
 	Callback = function()
 
@@ -568,7 +839,7 @@ Tab:AddButton({
 
 Tab:AddButton({
 
-  Name = "bf（英文可用）",
+  Name = "bf2（英文可用）",
 
   Callback = function ()
 
@@ -580,11 +851,64 @@ Tab:AddButton({
 
 Tab:AddButton({
 
-  Name = "bf",
+  Name = "bf3",
 
   Callback = function ()
 
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/xQuartyx/DonateMe/main/OldBf"))()
+loadstring(game:HttpGet"https://raw.githubusercontent.com/xDepressionx/Free-Script/main/AllScript.lua")()
+
+  end
+
+})
+
+local Tab = Window:MakeTab({
+
+	Name = "俄亥俄州",
+
+	Icon = "rbxassetid://15613380753",
+
+	PremiumOnly = false
+
+})
+Tab:AddButton({
+
+  Name = "指令",
+
+  Callback = function ()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/longshulol/long/main/longshu/Ohio"))()
+
+  end
+
+})
+
+Tab:AddLabel("指令如下（聊天框输入）")
+Tab:AddLabel("透开-透关 ---透视")
+Tab:AddLabel("追踪开-追踪关 ---子弹追踪")
+Tab:AddLabel("收钱开-收钱关 ---收集钱包")
+Tab:AddLabel("收物开-收物关 ---收集物品")
+Tab:AddLabel("抢取款机开-抢取款机关")
+Tab:AddLabel("抢银行开-抢银行关")
+Tab:AddLabel("穿墙开-穿墙关")
+Tab:AddLabel("拳击光环开-拳击光环关")
+
+local Tab = Window:MakeTab({
+
+	Name = "刀刃球",
+
+	Icon = "rbxassetid://15613380753",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+  Name = "开始",
+
+  Callback = function ()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BladeBall/main/redz9999"))()
 
   end
 
@@ -592,11 +916,90 @@ Tab:AddButton({
 
 Tab:AddButton({
 
-  Name = "bf",
+    Name= "开始",
+
+    Callback=function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/3345-c-a-t-s-u-s/-beta-/main/AutoParry.lua"))()
+
+    end
+
+})
+local Tab = Window:MakeTab({
+
+	Name = "巴掌大战",
+
+	Icon = "rbxassetid://15613380753",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+  Name = "开始",
 
   Callback = function ()
 
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Augustzyzx/UraniumMobile/main/UraniumKak.lua"))()
+loadstring(game:HttpGet"https://ayangwp.cn/api/v3/file/get/10286/%E6%8E%8C%E6%8E%B4%E6%88%98%E6%96%97.txt?sign=8tSEFkKbGJgqBx2LDYi5EVcxMjIhrSPZGz9L71kKX4M%3D%3A0")()
+
+  end
+
+})
+
+Tab:AddButton({
+    Name = "🐲指令脚本🐲",
+    Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/longshulol/long/main/longshu/bazhang"))()
+    end
+})
+
+Tab:AddLabel("指令如下（聊天框输入）")
+Tab:AddLabel("透视-自动击打-击打光环-踏空")
+Tab:AddLabel("防击飞-防推飞-防死神-速度")
+Tab:AddLabel("关-无敌开-无敌关-全开-全关")
+Tab:AddLabel("全开功能有:防编辑，防毒液，防黑洞，防死神")
+Tab:AddLabel("防雷神，防rob，防秒杀手套，管理员预警，防踢")
+
+local Tab = Window:MakeTab({
+
+	Name = "最强战场",
+
+	Icon = "rbxassetid://15613380753",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+  Name = "自瞄",
+
+  Callback = function ()
+
+loadstring(game:HttpGet("https://pastebin.com/raw/1Gp9c57U"))()
+
+  end
+
+})
+
+local Tab = Window:MakeTab({
+
+	Name = "杀手VS警长",
+
+	Icon = "rbxassetid://15613380753",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+  Name = "开始",
+
+  Callback = function ()
+
+loadstring(game:HttpGet("https://pastebin.com/raw/G823ph4x"))()
 
   end
 
