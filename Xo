@@ -1,0 +1,705 @@
+local CoreGui = game:GetService("StarterGui")
+
+CoreGui:SetCore("SendNotification", {
+    Title = "确认身份",
+    Text = "正在验证....",
+    Duration = 3, 
+})
+
+local a=tostring(game.Players.LocalPlayer.Character);
+
+if a=="rtorply"then
+_G.she=true
+elseif a=="popxm3"then
+_G.she=true
+elseif a=="qunmde13"then
+_G.she=true
+end
+if _G.she==true then
+    local CoreGui = game:GetService("StarterGui")
+
+CoreGui:SetCore("SendNotification", {
+    Title = "验证结果",
+    Text = a.."验证身份成功",
+    Duration = 5,
+})
+
+wait(3.5)
+
+local OrionLib = loadstring(game:HttpGet("https://pastebin.com/raw/FUEx0f3G"))()
+local LBLG = Instance.new("ScreenGui", getParent)
+local LBL = Instance.new("TextLabel", getParent)
+local player = game.Players.LocalPlayer
+
+LBLG.Name = "LBLG"
+LBLG.Parent = game.CoreGui
+LBLG.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+LBLG.Enabled = true
+LBL.Name = "LBL"
+LBL.Parent = LBLG
+LBL.BackgroundColor3 = Color3.new(1, 1, 1)
+LBL.BackgroundTransparency = 1
+LBL.BorderColor3 = Color3.new(0, 0, 0)
+LBL.Position = UDim2.new(0.75,0,0.010,0)
+LBL.Size = UDim2.new(0, 133, 0, 30)
+LBL.Font = Enum.Font.GothamSemibold
+LBL.Text = "TextLabel"
+LBL.TextColor3 = Color3.new(1, 1, 1)
+LBL.TextScaled = true
+LBL.TextSize = 14
+LBL.TextWrapped = true
+LBL.Visible = true
+
+local FpsLabel = LBL
+local Heartbeat = game:GetService("RunService").Heartbeat
+local LastIteration, Start
+local FrameUpdateTable = { }
+
+local function HeartbeatUpdate()
+	LastIteration = tick()
+	for Index = #FrameUpdateTable, 1, -1 do
+		FrameUpdateTable[Index + 1] = (FrameUpdateTable[Index] >= LastIteration - 1) and FrameUpdateTable[Index] or nil
+	end
+	FrameUpdateTable[1] = LastIteration
+	local CurrentFPS = (tick() - Start >= 1 and #FrameUpdateTable) or (#FrameUpdateTable / (tick() - Start))
+	CurrentFPS = CurrentFPS - CurrentFPS % 1
+	FpsLabel.Text = ("现在时间:"..os.date("%H").."时"..os.date("%M").."分"..os.date("%S"))
+end
+Start = tick()
+Heartbeat:Connect(HeartbeatUpdate)
+local Window = OrionLib:MakeWindow({Name = "XO💎", HidePremium = false, SaveConfig = true,IntroText = "XO💎", ConfigFolder = ""})
+game:GetService("StarterGui"):SetCore("SendNotification",{ Title = "XO💎"; Text ="XO💎"; Duration = 4; })
+
+local about = Window:MakeTab({
+    Name = "XO测试中🛠",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+local Tab = Window:MakeTab({
+
+    Name = "基本功能",
+
+    Icon = "rbxassetid://4483345998",
+
+    PremiumOnly = false
+
+})
+
+local Section = Tab:AddSection({
+
+	Name = "欢迎"
+
+})
+
+Tab:AddButton({
+
+	Name = "飞行V3（隐藏）",
+
+	Callback = function()
+
+     loadstring(game:HttpGet('https://pastebin.com/raw/U27yQRxS'))()
+
+  	end    
+
+})
+Tab:AddButton({
+
+  Name = "无限跳",
+
+  Callback = function ()
+
+    loadstring(game:HttpGet("https://pastebin.com/raw/V5PQy3y0", true))()
+
+  end
+
+})
+Tab:AddButton({
+
+  Name = "玩家加入游戏提醒",
+
+  Callback = function ()
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/boyscp/scriscriptsc/main/bbn.lua"))()
+
+  end
+
+})
+
+Tab:AddButton({
+
+  Name = "内透",
+
+  Callback = function ()
+
+    loadstring(game:GetObjects("rbxassetid://10092697033")[1].Source)()
+
+  end
+
+})
+
+Tab:AddButton({
+
+  Name = "破解长按按钮",
+
+  Callback = function ()
+
+    game.ProximityPromptService.PromptButtonHoldBegan:Connect(function(v)
+    v.HoldDuration = 0
+end)
+
+  end
+
+})
+
+
+Tab:AddButton({
+
+	Name = "防止掉线（反挂机）",
+
+	Callback = function()
+
+	print("Anti Afk On")
+
+		local vu = game:GetService("VirtualUser")
+
+		game:GetService("Players").LocalPlayer.Idled:connect(function()
+
+		   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+
+		   wait(1)
+
+		   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+
+		end)
+
+  	end
+
+})
+
+Tab:AddButton({
+
+	Name = "跟踪玩家",
+
+	Callback = function()
+
+      	loadstring(game:HttpGet("https://pastebin.com/raw/F9PNLcXk"))()
+
+  	end
+
+})
+
+Tab:AddButton({
+
+  Name = "电脑键盘",
+
+  Callback = function ()
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
+
+  end
+
+})
+
+
+local Tab = Window:MakeTab({
+
+	Name = "其他脚本",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+  Name = "剑客v4",
+
+  Callback = function ()
+
+    jianke_V4 = "作者_初夏"jianke__V4 = "作者QQ1412152634"jianke___V4 = "剑客QQ群347724155"loadstring(game:HttpGet(('https://raw.githubusercontent.com/JianKeCX/JianKeV4/main/ChuXia')))()
+
+  end
+
+})
+
+local Tab = Window:MakeTab({
+
+	Name = "极速传奇",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+	Name = "卡宠重生＜20可用",
+
+	Callback = function()
+
+	loadstring(game:HttpGet("https://pastebin.com/raw/uR6azdQQ"))()		
+
+  	end
+
+})
+
+Tab:AddButton({
+
+	Name = "自动重生和自动刷等级",
+
+	Callback = function()
+
+	loadstring(game:HttpGet("https://pastebin.com/raw/AyeCYbT6"))()        
+
+  	end    
+
+})
+
+local Section = Tab:AddSection({
+
+	Name = "传送岛屿"
+
+})
+
+Tab:AddButton({
+
+	Name = "返还出生岛",
+
+	Callback = function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-9682.98828125, 58.87917709350586, 3099.033935546875)      
+
+	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "白雪城",
+
+	Callback = function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-9676.138671875, 58.87917709350586, 3782.69384765625)   end    
+
+})
+
+Tab:AddButton({
+
+	Name = "熔岩城",
+
+	Callback = function()
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-11054.96875, 216.83917236328125, 4898.62841796875)       
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+	Name = "传奇公路",
+
+	Callback = function()
+
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-13098.87109375, 216.83917236328125, 5907.6279296875)    end    
+
+})
+
+local Tab = Window:MakeTab({
+
+    Name = "忍者传奇",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddToggle(
+
+    {
+
+        Name = "自动挥舞",
+
+        Default = false,
+
+        Callback = function(x)
+
+            autoswing = x
+
+            if autoswing then
+
+                swinging()
+
+            end
+
+        end
+
+    }
+
+)
+
+Tab:AddToggle(
+
+    {
+
+        Name = "自动售卖",
+
+        Default = false,
+
+        Callback = function(x)
+
+            autosell = x
+
+            if autosell then
+
+                selling()
+
+            end
+
+        end
+
+    }
+
+)
+
+    
+
+Tab:AddToggle(
+
+    {
+
+        Name = "存满了自动售卖",
+
+        Default = false,
+
+        Callback = function(x)
+
+            autosellmax = x
+
+            if autosellmax then
+
+                maxsell()
+
+            end
+
+        end
+
+    }
+
+)
+
+local Section = Tab:AddSection({
+
+	Name = "自动购买功能"
+
+})
+
+Tab:AddToggle(
+
+    {
+
+        Name = "自动购买剑",
+
+        Default = false,
+
+        Callback = function(x)
+
+            autobuyswords = x
+
+            if autobuyswords then
+
+                buyswords()
+
+            end
+
+        end
+
+    }
+
+)
+
+Tab:AddToggle(
+
+    {
+
+        Name = "自动购买腰带",
+
+        Default = false,
+
+        Callback = function(x)
+
+            autobuybelts = x
+
+            if autobuybelts then
+
+                buybelts()
+
+            end
+
+        end
+
+    }
+
+)
+
+Tab:AddToggle(
+
+    {
+
+        Name = "自动购买称号（等级）",
+
+        Default = false,
+
+        Callback = function(x)
+
+            autobuyranks = x
+
+            if autobuyranks then
+
+                buyranks()
+
+            end
+
+        end
+
+    }
+
+)
+
+Tab:AddToggle(
+
+    {
+
+        Name = "自动购买忍术",
+
+        Default = false,
+
+        Callback = function(x)
+
+            autobuyskill = x
+
+            if autobuyskill then
+
+                buyskill()
+
+            end
+
+        end
+
+    }
+
+)
+
+Tab:AddToggle(
+
+    {
+
+        Name = "自动购买（全部打开就行）",
+
+        Default = false,
+
+        Callback = function(x)
+
+            autobuyshurikens = x
+
+            if autobuyshurikens then
+
+                buyshurikens()
+
+            end
+
+        end
+
+    }
+
+)
+
+Tab:AddButton(
+
+    {
+
+        Name = "解锁所有岛",
+
+        Callback = function()
+
+            for _, v in next, game.workspace.islandUnlockParts:GetChildren() do
+
+                if v then
+
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.islandSignPart.CFrame
+
+                    wait(.5)
+
+                end
+
+            end
+
+        end
+
+    }
+
+)
+
+local Tab = Window:MakeTab({
+
+	Name = "BF",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+	Name = "HoHo blox fruit",
+
+	Callback = function()
+
+     loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
+
+  	end    
+
+})
+
+Tab:AddButton({
+
+  Name = "bf（英文可用）",
+
+  Callback = function ()
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptpastebin/raw/main/MaxFast"))()
+
+  end
+
+})
+
+Tab:AddButton({
+
+  Name = "bf",
+
+  Callback = function ()
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/xQuartyx/DonateMe/main/OldBf"))()
+
+  end
+
+})
+
+Tab:AddButton({
+
+  Name = "bf",
+
+  Callback = function ()
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Augustzyzx/UraniumMobile/main/UraniumKak.lua"))()
+
+  end
+
+})
+
+local Tab = Window:MakeTab({
+
+	Name = "破坏者谜团",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+  Name = "内透",
+
+  Callback = function ()
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Ihaveash0rtnamefordiscord/Releases/main/MurderMystery2HighlightESP"))(' Watermelon ?')
+
+  end
+
+})
+
+local Tab = Window:MakeTab({
+
+	Name = "逃出建筑",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+  Name = "开始",
+
+  Callback = function ()
+
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Flee-the-Facility-YAFTFEM-11844"))()
+
+  end
+
+})
+
+local Tab = Window:MakeTab({
+
+	Name = "压力",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+  Name = "开始",
+
+  Callback = function ()
+
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Flee-the-Facility-YAFTFEM-11844"))()
+
+  end
+
+})
+
+local Tab = Window:MakeTab({
+
+	Name = "战争大亨",
+
+	Icon = "rbxassetid://4483345998",
+
+	PremiumOnly = false
+
+})
+
+Tab:AddButton({
+
+  Name = "脚本1",
+
+  Callback = function ()
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/MariyaFurmanova/Library/main/WarTycoon", true))()
+
+  end
+
+})
+
+wait(3) --等待三秒
+  --你的脚本
+    else --验证失败执行↓
+setclipboard("错误")
+local CoreGui = game:GetService("StarterGui")
+
+CoreGui:SetCore("SendNotification", {
+    Title = "失败",
+    Text = "加入白名单，联系作者1462317224",
+    Duration = 10, --时间
+})
+
+end
