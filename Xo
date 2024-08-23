@@ -20,7 +20,7 @@ if _G.she==true then
 
 CoreGui:SetCore("SendNotification", {
     Title = "脚本加载中wait",
-    Text = a.."验证身份成功",
+    Text = a.."验证成功",
     Duration = 5,
 })
 
@@ -235,12 +235,20 @@ tab2:Button("高画质",function()
      loadstring(game:HttpGet('https://pastebin.com/raw/U27yQRxS'))()
  end)
  
- tab2:Button("甩飞别人",function() 
-     loadstring(game:HttpGet("https://pastebin.com/raw/GnvPVBEi"))()
+ tab2:Button("吸人"，function()
+ loadstring(game:HttpGet("https://shz.al/~HHAKS"))()
+ end)
+ 
+ tab2:Button("甩飞别人 霖溺",function() 
+     loadstring(game:HttpGet("https://shz.al/~linNI"))()
  end)
  
  tab2:Button("无限跳",function() 
      loadstring(game:HttpGet("https://pastebin.com/raw/V5PQy3y0", true))()
+ end)
+ 
+ tab2:Button("鼠标手机不建议用",function() 
+     loadstring(game:HttpGet(('https://pastefy.ga/V75mqzaz/raw'),true))()
  end)
  
 tab2:Button("死亡",function() 
@@ -344,8 +352,12 @@ loadstring(game:HttpGet("https://rawscripts.net/raw/Blox-Fruits-RedzHub-No-Key-A
  loadstring(game:HttpGet("https://raw.githubusercontent.com/MariyaFurmanova/Library/main/WarTycoon", true))()
  end)
  
- tab3:Button("刀刃球REDZ", function() 
- loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BladeBall/main/redz9999"))()
+ tab3:Button("bf第2脚本", function() 
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/XiaoYunCN/Xiao-Yun-UWU/main/%E6%B5%B7%E8%B4%BC%E7%8E%8Bbf.lua", true))()
+ end)
+ 
+ tab3:Button("scp角色扮演",function() 
+     loadstring(game:HttpGet('https://raw.githubusercontent.com/Infinity2346/Tect-Menu/main/Scp%20roleplay%201.txt'))()
  end)
  
 tab3:Button("俄亥俄州指令脚本", function() 
