@@ -103,21 +103,10 @@ uihide = false
  local setup = win:Tab("XO🔮")
 
  setup:Label("作者A1462317224")
- 
- setup:Label("俄亥俄州指令聊天框输入")
- 
- setup:Label("追踪开-追踪关 ---子弹追踪")
- 
- setup:Label("收钱开-收钱关 ---收集钱包")
- 
- setup:Label("收物开-收物关 ---收集物品")
- 
- setup:Label("抢取款机开-抢取款机关")
- 
- setup:Label("抢银行开-抢银行关")
- 
- setup:Label("拳击光环开-拳击光环关")
- 
+
+    setup:Label("你的用户名:"..game.Players.LocalPlayer.Character.Name)
+    setup:Label("你的注入器:"..identifyexecutor())
+    
 setup:Button("移除声音",function()
 for i, v in pairs(game.Workspace["_WorldOrigin"]:GetChildren()) do
 if v.Name == "CurvedRing" or v.Name == "SlashHit" or v.Name == "SwordSlash" or v.Name == "Sounds" then
@@ -130,7 +119,7 @@ setup:Colorpicker("更改用户界面颜色",Color3.fromRGB(44, 120, 224), funct
  end)
  
  local tab = win:Tab("通用") 
- 
+    
  tab:Button("隐形", function() 
  loadstring(game:HttpGet("https://gist.githubusercontent.com/skid123skidlol/cd0d2dce51b3f20ad1aac941da06a1a1/raw/f58b98cce7d51e53ade94e7bb460e4f24fb7e0ff/%257BFE%257D%2520Invisible%2520Tool%2520(can%2520hold%2520tools)",true))()
  end)
@@ -215,6 +204,10 @@ end)
  game.Players.LocalPlayer.Character.Humanoid.JumpPower = value
  end)
  
+ tab2:Button("小范围",function() 
+     loadstring(game:HttpGet("https://pastebin.com/raw/jiNwDbCN"))()
+ end)
+ 
  tab2:Textbox("速度",true, function(value) 
  game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = value
  end)
@@ -235,19 +228,19 @@ tab2:Button("高画质",function()
      loadstring(game:HttpGet('https://pastebin.com/raw/U27yQRxS'))()
  end)
  
- tab2:Button("吸人"，function()
- loadstring(game:HttpGet("https://shz.al/~HHAKS"))()
+ tab2:Button("甩飞别人霖溺",function() 
+     loadstring(game:HttpGet("https://shz.al/~linNI"))()
  end)
  
- tab2:Button("甩飞别人 霖溺",function() 
-     loadstring(game:HttpGet("https://shz.al/~linNI"))()
+ tab2:Button("吸人",function() 
+     loadstring(game:HttpGet('https://pastebin.com/raw/hQSBGsw2'))()
  end)
  
  tab2:Button("无限跳",function() 
      loadstring(game:HttpGet("https://pastebin.com/raw/V5PQy3y0", true))()
  end)
  
- tab2:Button("鼠标手机不建议用",function() 
+ tab2:Button("鼠标",function() 
      loadstring(game:HttpGet(('https://pastefy.ga/V75mqzaz/raw'),true))()
  end)
  
@@ -340,28 +333,51 @@ tab3:Button("BF REDZ", function()
 loadstring(game:HttpGet("https://rawscripts.net/raw/Blox-Fruits-RedzHub-No-Key-Autofarm-17214"))()
  end)
  
+ tab3:Button("bf最强脚本",function() 
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/AkiraNus/UniquehubKak/main/FreeCr.Xenonhub"))()
+ end)
+ 
+ tab3:Button("bf自动箱子",function() 
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMael7/NewIceHub/main/Brookhaven"))()
+ end)
+ 
+  tab3:Button("杀手vs警长",function() 
+     loadstring(game:HttpGet("https://pastebin.com/raw/yadbPQUm",true))()
+ end)
+ 
+  tab3:Button("破坏者谜团",function() 
+     loadstring(game:HttpGet(("https://raw.githubusercontent.com/Ethanoj1/EclipseMM2/master/Script"),true))()
+ end)
+ 
  tab3:Button("人机压力", function() 
  loadstring(game:HttpGet("https://github.com/DocYogurt/Main/raw/main/Scripts/Pressure?raw=true"))()
  end)
+  tab3:Button("国王遗产1",function() 
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/sannin9000/scripts/main/kinglegacy.lua"))()
+ end)
  
- tab3:Button("微山压力",function() 
-     link = loadstring(game:HttpGet("https://github.com/Drop56796/CreepyEyeHub/blob/main/obfuscate.lua?raw=true"))()
+  tab3:Button("国王遗产2",function() 
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/master/legacy"))()
+ end)
+ 
+  tab3:Button("国王遗产3",function() 
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/hajibeza/RIPPER-HUB/main/King%20Leagacy"))()
+ end)
+ 
+  tab3:Button("飞行比赛",function() 
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/NightCoded/script/main/fly-race.lua"))()
+ end)
+ 
+  tab3:Button("恐怖奶奶",function() 
+     loadstring(game:HttpGet("https://pastefy.app/o688Jvmn/raw"))()
  end)
  
  tab3:Button("战争开始", function() 
  loadstring(game:HttpGet("https://raw.githubusercontent.com/MariyaFurmanova/Library/main/WarTycoon", true))()
  end)
  
- tab3:Button("bf第2脚本", function() 
- loadstring(game:HttpGet("https://raw.githubusercontent.com/XiaoYunCN/Xiao-Yun-UWU/main/%E6%B5%B7%E8%B4%BC%E7%8E%8Bbf.lua", true))()
- end)
- 
  tab3:Button("scp角色扮演",function() 
      loadstring(game:HttpGet('https://raw.githubusercontent.com/Infinity2346/Tect-Menu/main/Scp%20roleplay%201.txt'))()
- end)
- 
-tab3:Button("俄亥俄州指令脚本", function() 
- loadstring(game:HttpGet("https://raw.githubusercontent.com/longshulol/long/main/longshu/Ohio"))()
  end)
  
  tab3:Button("破坏者谜团透视", function() 
@@ -377,7 +393,7 @@ tab3:Button("逃出建筑",function()
  tab4:Button("卡宠",function() 
      loadstring(game:HttpGet("https://pastebin.com/raw/uR6azdQQ"))()
  end)
- 
+    
  -- Gui to Lua 
  -- Version: 3.2 
   
