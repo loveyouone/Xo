@@ -1,4 +1,3 @@
-
 local CoreGui = game:GetService("StarterGui")
 
 CoreGui:SetCore("SendNotification", {
@@ -333,8 +332,12 @@ tab3:Button("BF REDZ", function()
 loadstring(game:HttpGet("https://rawscripts.net/raw/Blox-Fruits-RedzHub-No-Key-Autofarm-17214"))()
  end)
  
- tab3:Button("压力中文", function() 
- loadstring(game:HttpGet("https://rawscripts.net/raw/Flee-the-Facility-YAFTFEM-11844"))()
+ tab3:Button("人机压力", function() 
+ loadstring(game:HttpGet("https://github.com/DocYogurt/Main/raw/main/Scripts/Pressure?raw=true"))()
+ end)
+ 
+ tab3:Button("微山压力",function() 
+     link = loadstring(game:HttpGet("https://github.com/Drop56796/CreepyEyeHub/blob/main/obfuscate.lua?raw=true"))()
  end)
  
  tab3:Button("战争开始", function() 
@@ -352,7 +355,17 @@ tab3:Button("俄亥俄州指令脚本", function()
  tab3:Button("破坏者谜团透视", function() 
  loadstring(game:HttpGet("https://raw.githubusercontent.com/Ihaveash0rtnamefordiscord/Releases/main/MurderMystery2HighlightESP"))(' Watermelon ?')
  end)
-
+ 
+tab3:Button("逃出建筑",function() 
+     loadstring(game:HttpGet("https://rawscripts.net/raw/Flee-the-Facility-YAFTFEM-11844"))()
+ end)
+ 
+ local tab4 = win:Tab("极速传奇") 
+ 
+ tab4:Button("卡宠",function() 
+     loadstring(game:HttpGet("https://pastebin.com/raw/uR6azdQQ"))()
+ end)
+ 
  -- Gui to Lua 
  -- Version: 3.2 
   
