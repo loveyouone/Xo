@@ -333,7 +333,11 @@ local tab3 = win:Tab("其他游戏脚本合并")
 tab3:Button("BF REDZ", function() 
 loadstring(game:HttpGet("https://rawscripts.net/raw/Blox-Fruits-RedzHub-No-Key-Autofarm-17214"))()
  end)
- 
+
+tab3:Button("BF好用脚本″)，function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xQuartyx/DonateMe/main/OldBf"))()
+ end)
+
  tab3:Button("游戏通行证(跑酷游戏)",function() 
      for _,v in pairs(game:GetDescendants()) do
 if v.ClassName == "RemoteEvent" then
